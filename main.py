@@ -25,26 +25,22 @@ def edit_mp3():
         print(f"{Fore.WHITE}[{Fore.RED}!{Fore.WHITE}] Error loading MP3 file metadata.")
         return
 
-    choix = int(input(f"{Fore.WHITE}[{Fore.GREEN}!{Fore.WHITE}] Que voulez vous modifié ?\n  1- Artist Name\n  2- Album Name\n  3- Title of the song\n  0- Exit"))
-    while choix !=0:
+    while True:
+        choix = int(input(f"\n{Fore.WHITE}[{Fore.GREEN}!{Fore.WHITE}] Que voulez vous modifié ?\n  1- Artist Name\n  2- Album Name\n  3- Title of the song\n  0- Exit\n  Choice : "))
         match choix:
             case 1:
-                artist_name = input(f"{Fore.WHITE}[{Fore.GREEN}?{Fore.WHITE}] Artist name ? :")
+                artist_name = input(f"\n{Fore.WHITE}[{Fore.GREEN}?{Fore.WHITE}] Artist name ? :")
                 mp3_file.tag.artist = artist_name
-                break
             case 2: 
-                album_name = input(f"{Fore.WHITE}[{Fore.GREEN}?{Fore.WHITE}] Album name ? :")
+                album_name = input(f"\n{Fore.WHITE}[{Fore.GREEN}?{Fore.WHITE}] Album name ? :")
                 mp3_file.tag.album = album_name
-                break
             case 3:
-                title_song = input(f"{Fore.WHITE}[{Fore.GREEN}?{Fore.WHITE}] Title of the song ? :")
+                title_song = input(f"\n{Fore.WHITE}[{Fore.GREEN}?{Fore.WHITE}] Title of the song ? :")
                 mp3_file.tag.title = title_song
-                break
             case 0:
                 break
             case _:
-                print(f"{Fore.WHITE}[{Fore.RED}!{Fore.WHITE}] Unknow choice ! Try again")
-                break
+                print(f"\n{Fore.WHITE}[{Fore.RED}!{Fore.WHITE}] Unknow choice ! Try again")
     mp3_file.tag.save()
     print(f"{Fore.WHITE}[{Fore.GREEN}?{Fore.WHITE}] Saved with sucess")
 
