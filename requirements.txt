@@ -1,0 +1,5 @@
+colorama
+keyboard
+time
+os
+eyed3
