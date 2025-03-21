@@ -48,6 +48,6 @@ match file_extension:
     case ".mp3":
         edit_mp3()
     case _:
-        print(f"{Fore.WHITE}[{Fore.GREEN}!{Fore.WHITE}] Unknown file format")
+        print(f"{Fore.WHITE}[{Fore.GREEN}!{Fore.WHITE}] File Format not supported")
             
 
