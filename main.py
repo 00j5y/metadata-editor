@@ -11,6 +11,7 @@ init()
 def clear():
     os.system('cls' if os.name=='nt' else 'clear')
 
+clear()
 print(f"{Fore.WHITE}[{Fore.GREEN}!{Fore.WHITE}] MetaData Editor / Credit : @00j5y")
 print("")
 print(f"{Fore.WHITE}[{Fore.RED}!{Fore.WHITE}] Press 'space' to start")
@@ -19,7 +20,7 @@ time.sleep(0.1)
 
 print("")
 
-file_name = input(f"{Fore.WHITE}[{Fore.RED}!{Fore.WHITE}] File name :")
+file_name = input(f"{Fore.WHITE}[{Fore.GREEN}!{Fore.WHITE}] File name :")
 split_tup = os.path.splitext(file_name)
 file_extension = split_tup[1]
 
@@ -120,7 +121,7 @@ def edit_mp4():
                 clear()
 
     mp4_file.save()
-    print(f"{Fore.WHITE}[{Fore.GREEN}?{Fore.WHITE}] Saved successfully")
+    print(f"\n{Fore.WHITE}[{Fore.RED}?{Fore.WHITE}] Saved successfully")
 
 match file_extension:
     case ".mp3":
