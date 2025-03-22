@@ -8,6 +8,9 @@ from mutagen.mp4 import MP4
 # Initialisation de colorama
 init()
 
+def clear():
+    os.system('cls' if os.name=='nt' else 'clear')
+
 print(f"{Fore.WHITE}[{Fore.GREEN}!{Fore.WHITE}] MetaData Editor / Credit : @00j5y")
 print("")
 print(f"{Fore.WHITE}[{Fore.RED}!{Fore.WHITE}] Press 'space' to start")
@@ -41,22 +44,28 @@ def edit_mp3():
             case 1:
                 artist_name = input(f"\n{Fore.WHITE}[{Fore.GREEN}?{Fore.WHITE}] Artist name ? : ")
                 mp3_file["artist"] = artist_name
+                clear()
             case 2:
                 album_name = input(f"\n{Fore.WHITE}[{Fore.GREEN}?{Fore.WHITE}] Album name ? : ")
                 mp3_file["album"] = album_name
+                clear()
             case 3:
                 title_song = input(f"\n{Fore.WHITE}[{Fore.GREEN}?{Fore.WHITE}] Title of the song ? : ")
                 mp3_file["title"] = title_song
+                clear()
             case 4:
                 genre_song = input(f"\n{Fore.WHITE}[{Fore.GREEN}?{Fore.WHITE}] Genre of the song ? : ")
                 mp3_file["genre"] = genre_song
+                clear()
             case 5:
                 year_song = input(f"\n{Fore.WHITE}[{Fore.GREEN}?{Fore.WHITE}] Release Date ? : ")
                 mp3_file["date"] = year_song
+                clear()
             case 0:
                 break
             case _:
                 print(f"\n{Fore.WHITE}[{Fore.RED}!{Fore.WHITE}] Unknown choice! Try again")
+                clear()
 
     mp3_file.save()
     print(f"{Fore.WHITE}[{Fore.GREEN}?{Fore.WHITE}] Saved successfully")
@@ -83,25 +92,32 @@ def edit_mp4():
             case 1:
                 artist_vid = input(f"\n{Fore.WHITE}[{Fore.GREEN}?{Fore.WHITE}] Artist name ? : ")
                 mp4_file["\xa9ART"] = [artist_vid]
+                clear()
             case 2:
                 album_vid = input(f"\n{Fore.WHITE}[{Fore.GREEN}?{Fore.WHITE}] Album name ? : ")
                 mp4_file["\xa9alb"] = [album_vid]
+                clear()
             case 3:
                 title_vid = input(f"\n{Fore.WHITE}[{Fore.GREEN}?{Fore.WHITE}] Title of the video ? : ")
                 mp4_file["\xa9nam"] = [title_vid]
+                clear()
             case 4:
                 desc_vid = input(f"\n{Fore.WHITE}[{Fore.GREEN}?{Fore.WHITE}] Description ? : ")
                 mp4_file["desc"] = [desc_vid]
+                clear()
             case 5:
                 genre_vid = input(f"\n{Fore.WHITE}[{Fore.GREEN}?{Fore.WHITE}] Genre ? : ")
                 mp4_file["\xa9gen"] = [genre_vid]
+                clear()
             case 6:
                 year_vid = input(f"\n{Fore.WHITE}[{Fore.GREEN}?{Fore.WHITE}] Release Date ? : ")
                 mp4_file["\xa9day"] = [year_vid]
+                clear()
             case 0:
                 break
             case _:
                 print(f"\n{Fore.WHITE}[{Fore.RED}!{Fore.WHITE}] Unknown choice! Try again")
+                clear()
 
     mp4_file.save()
     print(f"{Fore.WHITE}[{Fore.GREEN}?{Fore.WHITE}] Saved successfully")
