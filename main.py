@@ -1,6 +1,4 @@
 from colorama import Fore, init
-import keyboard
-import time
 import os
 from mutagen.easyid3 import EasyID3
 from mutagen.mp4 import MP4
@@ -16,13 +14,15 @@ clear()
 print("==============================\n"
       "*                            *\n"
       "*   Drag and drop the file   *\n"
-      "*     in the terminal        *\n"
+      "*      in the terminal       *\n"
+      "*     and press \"ENTER\"    *\n"
       "*                            *\n"
       "==============================\n\n")
 
-file_name = getpass("")
+file_name = getpass(" ")
 split_tup = os.path.splitext(file_name)
 file_extension = split_tup[1]
+clear()
 
 
 def edit_mp3():
