@@ -4,6 +4,7 @@ import time
 import os
 from mutagen.easyid3 import EasyID3
 from mutagen.mp4 import MP4
+from getpass import getpass
 
 # Initialisation de colorama
 init()
@@ -12,15 +13,16 @@ def clear():
     os.system('cls' if os.name=='nt' else 'clear')
 
 clear()
-print(f"{Fore.WHITE}[{Fore.GREEN}!{Fore.WHITE}] MetaData Editor / Credit : @00j5y")
-print("")
-print(f"{Fore.WHITE}[{Fore.RED}!{Fore.WHITE}] Press 'space' to start")
-keyboard.wait('space')
-time.sleep(0.1)
+print("==============================\n"
+      "*                            *\n"
+      "*   Drag and drop the file   *\n"
+      "*     in the terminal        *\n"
+      "*                            *\n"
+      "==============================")
 
 print("")
 
-file_name = input(f"{Fore.WHITE}[{Fore.GREEN}!{Fore.WHITE}] File name :")
+file_name = getpass("")
 split_tup = os.path.splitext(file_name)
 file_extension = split_tup[1]
 
