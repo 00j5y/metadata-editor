@@ -69,7 +69,7 @@ def edit_mp3():
                 clear()
 
     mp3_file.save()
-    print(f"{Fore.WHITE}[{Fore.GREEN}?{Fore.WHITE}] Saved successfully")
+    print(f"{Fore.WHITE}[{Fore.GREEN}!{Fore.WHITE}] Saved successfully")
 
 
 def edit_mp4():
@@ -121,7 +121,7 @@ def edit_mp4():
                 clear()
 
     mp4_file.save()
-    print(f"\n{Fore.WHITE}[{Fore.RED}?{Fore.WHITE}] Saved successfully")
+    print(f"\n{Fore.WHITE}[{Fore.GREEN}!{Fore.WHITE}] Saved successfully")
 
 match file_extension:
     case ".mp3":
