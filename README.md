@@ -39,7 +39,7 @@ py main.py
 
 <h2 align="center">⬇️ How to use</h2>
 
-1. Drag the file
+1. Drag the file (work only for MP3/MP4)
 2. Change what you want with the settings
 3. Save
 4. Enjoy!
