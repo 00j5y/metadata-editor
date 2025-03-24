@@ -1,4 +1,3 @@
 colorama
-keyboard
 mutagen
 getpass4
