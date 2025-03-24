@@ -18,9 +18,7 @@ print("==============================\n"
       "*   Drag and drop the file   *\n"
       "*     in the terminal        *\n"
       "*                            *\n"
-      "==============================")
-
-print("")
+      "==============================\n\n")
 
 file_name = getpass("")
 split_tup = os.path.splitext(file_name)
