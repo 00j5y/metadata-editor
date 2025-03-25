@@ -3,6 +3,7 @@ import os
 from mutagen.easyid3 import EasyID3
 from mutagen.mp4 import MP4
 from getpass import getpass
+import exiftool
 
 # Initialisation de colorama
 init()
@@ -23,6 +24,9 @@ file_name = getpass(" ")
 split_tup = os.path.splitext(file_name)
 file_extension = split_tup[1]
 clear()
+
+def edit_image():
+    print("Pas encore fait mgl j'avais fait un truc mais vsy le module pu la merde")
 
 
 def edit_mp3():
@@ -128,5 +132,7 @@ match file_extension:
         edit_mp3()
     case ".mp4":
         edit_mp4()
+    case ".png" | ".jpg" | ".jpeg" | ".gif" | ".webp":
+        edit_image()
     case _:
         print(f"{Fore.WHITE}[{Fore.GREEN}!{Fore.WHITE}] File format not supported")
