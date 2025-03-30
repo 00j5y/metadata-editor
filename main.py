@@ -132,7 +132,5 @@ match file_extension:
         edit_mp3()
     case ".mp4":
         edit_mp4()
-    case ".png" | ".jpg" | ".jpeg" | ".gif" | ".webp":
-        edit_image()
     case _:
         print(f"{Fore.WHITE}[{Fore.GREEN}!{Fore.WHITE}] File format not supported")
